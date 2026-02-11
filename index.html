@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Kopynus · game rank</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <section class="layers">
+    <div id="home" class="layers__container">
+      <!-- BACKGROUND LAYERS (behind content) -->
+      <div class="layers__item layer-1" style="background-image: url(img/layer-1.jpg);"></div>
+      <div class="layers__item layer-2" style="background-image: url(img/layer-2.png);"></div>
+      <div class="layers__item layer-5" style="background-image: url(img/layer-5.png);"></div>
+      <div class="layers__item layer-6" style="background-image: url(img/layer-6.png);"></div>
+      
+      <!-- CONTENT LAYER (hero + rank) -->
+      <div class="layers__item layer-3">
+        <div class="slide-container">
+          <!-- HERO PANEL (full screen) -->
+          <div class="hero-panel">
+            <div class="hero-content">
+              <h1>Choose The Best <span>Game By Kopynus & Isudzaki</span></h1>
+              <div class="hero-content__p">Rank all legendary games from Kopynus and Isudzaki</div>
+              <button class="button-start" id="goToRankBtn">▶ GO TO RANKS ◀</button>
+            </div>
+          </div>
+          <!-- RANK PANEL (full screen) -->
+          <div class="rank-panel">
+            <div class="rank-container">
+              <h2 class="section-title">😁 TIER LIST 😃</h2>
+              
+              <div class="tier-row">
+                <div class="tier-badge" style="background-color: var(--tier-s);" data-tier="S">
+                  S <i class="fa-regular fa-circle-question tier-info"></i>
+                </div>
+                <div id="tierS" class="tier-slot"></div>
+              </div>
+
+              <div class="tier-row">
+                <div class="tier-badge" style="background-color: var(--tier-a);" data-tier="A">
+                  A <i class="fa-regular fa-circle-question tier-info"></i>
+                </div>
+                <div id="tierA" class="tier-slot"></div>
+              </div>
+
+              <div class="tier-row">
+                <div class="tier-badge" style="background-color: var(--tier-b); color: #0a0a0a;" data-tier="B">
+                  B <i class="fa-regular fa-circle-question tier-info"></i>
+                </div>
+                <div id="tierB" class="tier-slot"></div>
+              </div>
+
+              <div class="tier-row">
+                <div class="tier-badge" style="background-color: var(--tier-c);" data-tier="C">
+                  C <i class="fa-regular fa-circle-question tier-info"></i>
+                </div>
+                <div id="tierC" class="tier-slot"></div>
+              </div>
+
+              <div class="tier-row">
+                <div class="tier-badge" style="background-color: var(--tier-d);" data-tier="D">
+                  D <i class="fa-regular fa-circle-question tier-info"></i>
+                </div>
+                <div id="tierD" class="tier-slot"></div>
+              </div>
+
+              <div class="tier-row">
+                <div class="tier-badge" style="background-color: var(--tier-dk);" data-tier="DK">
+                  DK <i class="fa-regular fa-circle-question tier-info"></i>
+                </div>
+                <div id="tierDK" class="tier-slot"></div>
+              </div>
+
+              <div class="rank-controls">
+                <button id="resetBtn" class="btn-reset"><i class="fa-solid fa-arrow-rotate-left"></i> RESET</button>
+                <button id="backToHeroBtn" class="btn-back"><i class="fa-solid fa-arrow-left"></i> BACK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RAIN LAYER (on top, non‑interactive) -->
+      <div class="layers__item layer-4">
+        <canvas id="rainCanvas" class="rain"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="https://github.com/MaksShahov" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/maksym_shakhov/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/kopynus" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://drive.google.com/drive/u/2/folders/18N-7LC7vDzrw_D6jK6LmswXhoJOLyBXt" target="_blank"><i class="fa-brands fa-google"></i></a>
+        <a href="https://www.youtube.com/channel/UCYKD0BJ2s6fRj3Szr8yojqA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+          <li><a href="#" id="footerHome">HOME</a></li>
+          <li><a href="#" id="footerRank">RANKING</a></li>
+        </ul>
+      </div>
+      <div class="footerBottom">
+        <p>Copyright &copy;2026; Designed by <span class="designer">Kopynus</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
