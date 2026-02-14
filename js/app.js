@@ -1,5 +1,4 @@
 (function() {
-  // ----- RAIN CANVAS -----
   const canvas = document.getElementById('rainCanvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -36,7 +35,6 @@
     });
   }
 
-  // ----- 3D PARALLAX -----
   document.addEventListener('mousemove', (e) => {
     const x = (e.clientX - window.innerWidth / 2) * -0.005;
     const y = (e.clientY - window.innerHeight / 2) * 0.01;
@@ -44,7 +42,6 @@
     document.documentElement.style.setProperty('--move-y', y + 'deg');
   });
 
-  // ----- GAME DATA (with your updated links) -----
   const gameList = [
     { name: "Crash Out", img: "img/crashOut.jpg", dev: "K", link: "https://drive.google.com/file/d/1ujCn5p33NMtr4K9h8cHkC_lWPbi_Qf_-/view?usp=drive_link" },
     { name: "Boat Defense", img: "img/BoatDefense.jpg", dev: "K", link: "https://kopynus.itch.io/boat-defense" },
@@ -53,16 +50,16 @@
     { name: "Earth Roots", img: "img/EarthRoots.jpeg", dev: "B", link: "https://drive.google.com/file/d/1i58M1MOET-lMHa5BHomx8LbgkG-fYkiO/view?usp=drive_link" },
     { name: "Ha-Ha Show", img: "img/HaHa.jpg", dev: "B", link: "https://kopynus.itch.io/ha-ha-show" },
     { name: "Clever Soccer", img: "img/Soccer.jpeg", dev: "K", link: "https://drive.google.com/file/d/1aecLaj1OKgrXlG3eaL7YTceyrZsCA8kK/view?usp=drive_link" },
-    { name: "Late", img: "img/Late.jpg", dev: "K", link: "https://drive.google.com/file/d/18A89XV-YOmVZ0Bn_dSBgBoWiV1L_ImqW/view?usp=drive_link" },
+    { name: "Late", img: "img/Late.jpg", dev: "K", link: "https://drive.google.com/file/d/1jh8vvZd8sYRopIUq29aOQnkMUOt8bCVM/view?usp=drive_link"},
     { name: "Running Guys", img: "img/RunningGuys.jpg", dev: "K", link: "https://drive.google.com/file/d/18A89XV-YOmVZ0Bn_dSBgBoWiV1L_ImqW/view?usp=drive_link" },
-    { name: "Spidey Dinner", img: "img/SpideyDinner.jpg", dev: "K", link: "" }, // no link – icon hidden
+    { name: "Spidey Dinner", img: "img/SpideyDinner.jpg", dev: "K", link: "https://drive.google.com/file/d/1Uoigtk0baUH2VMrfe8RPyYxeOernE1SV/view?usp=drive_link" },
     { name: "City Run", img: "img/CityRun.png", dev: "K", link: "https://drive.google.com/file/d/12l3CTOBGyrtE_jFKHBkO1TLJToAVQ3YA/view?usp=drive_link" },
     { name: "Blender Game", img: "img/BlenderGame.png", dev: "K", link: "https://drive.google.com/file/d/1HmM5fxM7mgWExvRB4sjuUi9WVA_B9P8i/view?usp=drive_link" },
     { name: "Don't stop Froggy!", img: "img/dsf.png", dev: "I", link: "https://isudzaki.itch.io/dont-stop-froggy" },
     { name: "Matrix Bird", img: "img/matrixbird.png", dev: "K", link: "https://drive.google.com/file/d/1yfKQ4BKFIh4XF5OipK7ts8vsnwYiwZWQ/view?usp=drive_link" },
     { name: "Shadow Life", img: "img/ShadowLife.png", dev: "I", link: "https://isudzaki.itch.io/shadow-life" },
     { name: "Planet Of Nature", img: "img/PlanetOfNature.png", dev: "I", link: "https://isudzaki.itch.io/planet-of-nature" },
-    { name: "Cats", img: "img/ps1cat.webp", dev: "I", link: "" }, // no link – icon hidden
+    { name: "IsuShoot", img: "img/ps1cat.webp", dev: "I", link: "https://github.com/Isudzaki/IsuShoot-MultiplayerGame" },
     { name: "Alien Attack", img: "img/alienattack.png", dev: "K", link: "https://gamejolt.com/games/alienatt/402138" },
     { name: "Epic Fights", img: "img/epicfights.webp", dev: "K", link: "https://gamejolt.com/games/epicfights/423269" },
     { name: "Snowman.exe", img: "img/snowman.jpg", dev: "K", link: "https://gamejolt.com/games/snowmanexe1/409218" },
@@ -75,15 +72,25 @@
     { name: "Minecraft Parody", img: "img/MineCraftParody.png", dev: "K", link: "https://drive.google.com/file/d/17wVV6I4b1LP1Twwkg2VZTtwFRejFeFb_/view?usp=drive_link" },
     { name: "Match Flowers", img: "img/Match Flowers.png", dev: "K", link: "https://drive.google.com/file/d/1ualhqO59JvzRi0OEeqfYxkb1iIFCqyA3/view?usp=drive_link" },
     { name: "Space Builder", img: "img/spacebuilder.png", dev: "K", link: "https://drive.google.com/file/d/1KU8ZusoF3RlrBhDQ1aqUEqry0Y76ATH_/view?usp=drive_link" },
+    { name: "Penguin Game", img: "img/penguingame.png", dev: "K", link: "https://drive.google.com/file/d/1saGgbeq1BRPOgYOS_r7GrE9HqATZfCIQ/view?usp=drive_link" },
+    { name: "Pixel Horror", img: "img/pixelhorror.png", dev: "K", link: "https://drive.google.com/file/d/1KkrqHqEUdW5hB_6rD6VTT-_jsSsgLvMb/view?usp=drive_link" },
+    { name: "Create a superhero", img: "img/createasuperhero.png", dev: "K", link: "https://gamejolt.com/games/fff/391796" },
+    { name: "Guess the word", img: "img/guesstheword.png", dev: "K", link: "https://drive.google.com/file/d/1Q2E2rYmAE0GMzmSOUtuZv0eIJTms874W/view?usp=drive_link" },
+    { name: "Draw Game", img: "img/drawgame.png", dev: "K", link: "https://drive.google.com/file/d/1IloxyzsnrDrYCyagqp3zW_tGRdNhLDlx/view?usp=drive_link" },
+	{ name: "Fire Fighter", img: "img/firefighter.png", dev: "K", link: "https://drive.google.com/file/d/1EIFSOzIfT_uEg-AuxTuaAkihk-fHRWQL/view?usp=drive_link" },
+	{ name: "Cube Catchers", img: "img/cubecatchers.jpeg", dev: "K", link: "https://drive.google.com/file/d/10ZIsPkse3U4x8_BEe32G6mJ9QrjZRST9/view?usp=drive_link" },	
+	{ name: "Karina Game", img: "img/karinagame.png", dev: "K", link: "" },
+	{ name: "HopScotch", img: "img/hopscotch.png", dev: "K", link: "https://kopynus.itch.io/hopscotch" },	
+	{ name: "Fnal", img: "img/fnal.png", dev: "K", link: "https://scratch.mit.edu/projects/264379240" },
+	{ name: "Foertinate", img: "img/foertinate.png", dev: "K", link: "https://scratch.mit.edu/projects/639501460/" },		
   ];
 
-  // ----- CARD CREATOR – link icon only if link exists -----
   function createGameCard(game, index) {
     const card = document.createElement('div');
     card.className = 'game-card';
     card.draggable = true;
     card.dataset.game = game.name;
-    card.dataset.link = game.link; // store even if empty, used for click only if link icon exists
+    card.dataset.link = game.link;
 
     const img = document.createElement('img');
     img.src = game.img;
@@ -103,7 +110,6 @@
     card.appendChild(nameSpan);
     card.appendChild(devBadge);
 
-    // 🔗 Conditionally add link icon if link is non-empty
     if (game.link && game.link.trim() !== '') {
       const linkIcon = document.createElement('span');
       linkIcon.className = 'game-link';
@@ -121,7 +127,6 @@
     return card;
   }
 
-  // ----- TIER CONTAINERS -----
   const tierS = document.getElementById('tierS');
   const tierA = document.getElementById('tierA');
   const tierB = document.getElementById('tierB');
@@ -130,7 +135,6 @@
   const tierDK = document.getElementById('tierDK');
   const allTiers = [tierS, tierA, tierB, tierC, tierD, tierDK];
 
-  // ----- DYNAMIC TOP 3 UPDATE -----
   function updateTop3() {
     const rankContainer = document.querySelector('.rank-container');
     const allCards = Array.from(rankContainer.querySelectorAll('.game-card'));
@@ -144,7 +148,6 @@
     });
   }
 
-  // ----- RESET FUNCTION -----
   function resetToInitial() {
     allTiers.forEach(tier => { if (tier) tier.innerHTML = ''; });
     gameList.forEach((game, idx) => {
@@ -154,7 +157,7 @@
   }
   resetToInitial();
 
-  // ----- DRAG & DROP -----
+
   let draggedCard = null;
 
   function handleDragStart(e) {
@@ -226,7 +229,7 @@
     tier.addEventListener('drop', handleDrop);
   });
 
-  // ----- SLIDE CONTROLS -----
+
   const slideContainer = document.querySelector('.slide-container');
   const goBtn = document.getElementById('goToRankBtn');
   const backBtn = document.getElementById('backToHeroBtn');
@@ -260,7 +263,7 @@
     });
   }
 
-  // ----- RESET BUTTON -----
+
   const resetBtn = document.getElementById('resetBtn');
   if (resetBtn) {
     resetBtn.addEventListener('click', (e) => {
@@ -269,7 +272,7 @@
     });
   }
 
-  // ----- TIER INFO TOOLTIP -----
+
   const tierDescriptions = {
     S: '✨ Top tier – absolute masterpieces',
     A: '🔥 Great games, highly recommended',
